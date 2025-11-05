@@ -87,20 +87,7 @@ var app = builder.Build();
 
 app.UseSerilogRequestLogging();
 
-// Configure the HTTP request pipeline.
-if (app.Environment.IsDevelopment())
-{
-    app.MapOpenApi();
-}
-
-app.MapScalarApiReference(options =>
-{
-    options.Theme = ScalarTheme.BluePlanet;
-    options.DefaultHttpClient = new(ScalarTarget.CSharp,
-        ScalarClient.RestSharp);
-});
- // commented out for using docker
-// app.UseHttpsRedirection();
+app.UseStaticFiles();
 
 app.UseCors(options =>
 {
@@ -108,9 +95,19 @@ app.UseCors(options =>
     options.AllowAnyOrigin();
     options.AllowAnyMethod();
 });
+
 app.UseAuthentication();
 app.UseMiddleware<ExceptionHandlingMiddleware>();
 app.UseAuthorization();
+
+// Must come BEFORE Scalar
+app.MapOpenApi();
+
+app.MapScalarApiReference(options =>
+{
+    options.Theme = ScalarTheme.BluePlanet;
+    options.DefaultHttpClient = new(ScalarTarget.CSharp, ScalarClient.RestSharp);
+});
 
 app.MapControllers();
 

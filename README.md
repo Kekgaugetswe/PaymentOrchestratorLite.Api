@@ -6,7 +6,7 @@
 It showcases clean backend architecture, authentication, paginated data retrieval, and structured logging, packaged with Docker support for easy deployment.
 
 Pairs with the Angular Frontend: *(Replace with your repo link once pushed)*  
-> 🔗 **Frontend UI:** https://github.com/USERNAME/PaymentOrchestratorLite.Web
+> 🔗 **Frontend UI:** https://github.com/kekgaugetswe/PaymentOrchestratorWeb
 
 ---
 
@@ -54,3 +54,30 @@ To persist logs on your machine:
 
 ```bash
 -v $(pwd)/logs:/app/logs
+```
+---
+## 🐳 Running the API via Docker
+
+### 1️⃣ Build the Docker Image
+
+```bash
+docker build -t payment-api -f PaymentOrchestratorLite.Api/Dockerfile .
+
+```
+### 2️⃣ Run the Container (with Persistent Database + Logs)
+
+```bash
+docker run \
+  -p 7297:8080 \
+  -v $(pwd)/app.db:/app/app.db \
+  -v $(pwd)/logs:/app/logs \
+  payment-api
+
+```
+### ✅ What this does
+
+| Flag | Meaning |
+|------|---------|
+| `-p 7297:8080` | Exposes the API at **http://localhost:7297** |
+| `-v $(pwd)/app.db:/app/app.db` | Keeps your **SQLite database persistent** outside the container |
+| `-v $(pwd)/logs:/app/logs` | Stores **Serilog log files** on your machine (not lost when container stops) |
