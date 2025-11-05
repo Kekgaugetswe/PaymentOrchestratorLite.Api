@@ -1,8 +1,11 @@
 {
   "version": 2,
-  "dgSpecHash": "Letb0zU8l1k=",
+  "dgSpecHash": "418dWP7BPzU=",
   "success": true,
   "projectFilePath": "/Users/kekgaugetswesebati/Development/PaymentOrchestratorLite.Api/PaymentOrchestratorLite.Domain/PaymentOrchestratorLite.Domain.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/Users/kekgaugetswesebati/.nuget/packages/microsoft.extensions.dependencyinjection.abstractions/9.0.10/microsoft.extensions.dependencyinjection.abstractions.9.0.10.nupkg.sha512",
+    "/Users/kekgaugetswesebati/.nuget/packages/microsoft.extensions.logging.abstractions/9.0.10/microsoft.extensions.logging.abstractions.9.0.10.nupkg.sha512"
+  ],
   "logs": []
 }

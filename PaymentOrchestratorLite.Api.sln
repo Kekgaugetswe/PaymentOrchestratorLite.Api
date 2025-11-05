@@ -2,6 +2,10 @@
 Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentOrchestratorLite.Api", "PaymentOrchestratorLite.Api\PaymentOrchestratorLite.Api.csproj", "{14FDC732-1253-40D7-B462-2445494076DA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentOrchestratorLite.Domain", "PaymentOrchestratorLite.Domain\PaymentOrchestratorLite.Domain.csproj", "{F1532A04-0B89-4162-8C4C-C2D97ED60F20}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PaymentOrchestratorLite.Infrastructure", "PaymentOrchestratorLite.Infrastructure\PaymentOrchestratorLite.Infrastructure.csproj", "{A31679BE-12DD-462C-8844-3EEFA916A001}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -12,5 +16,13 @@ Global
 		{14FDC732-1253-40D7-B462-2445494076DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14FDC732-1253-40D7-B462-2445494076DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14FDC732-1253-40D7-B462-2445494076DA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F1532A04-0B89-4162-8C4C-C2D97ED60F20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F1532A04-0B89-4162-8C4C-C2D97ED60F20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F1532A04-0B89-4162-8C4C-C2D97ED60F20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F1532A04-0B89-4162-8C4C-C2D97ED60F20}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A31679BE-12DD-462C-8844-3EEFA916A001}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A31679BE-12DD-462C-8844-3EEFA916A001}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A31679BE-12DD-462C-8844-3EEFA916A001}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A31679BE-12DD-462C-8844-3EEFA916A001}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
