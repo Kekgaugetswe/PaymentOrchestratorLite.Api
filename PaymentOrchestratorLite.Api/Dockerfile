@@ -8,6 +8,8 @@ FROM mcr.microsoft.com/dotnet/sdk:9.0 AS build
 ARG BUILD_CONFIGURATION=Release
 WORKDIR /src
 COPY ["PaymentOrchestratorLite.Api/PaymentOrchestratorLite.Api.csproj", "PaymentOrchestratorLite.Api/"]
+COPY ["PaymentOrchestratorLite.Domain/PaymentOrchestratorLite.Domain.csproj", "PaymentOrchestratorLite.Domain/"]
+COPY ["PaymentOrchestratorLite.Infrastructure/PaymentOrchestratorLite.Infrastructure.csproj", "PaymentOrchestratorLite.Infrastructure/"]
 RUN dotnet restore "PaymentOrchestratorLite.Api/PaymentOrchestratorLite.Api.csproj"
 COPY . .
 WORKDIR "/src/PaymentOrchestratorLite.Api"
@@ -20,4 +22,6 @@ RUN dotnet publish "./PaymentOrchestratorLite.Api.csproj" -c $BUILD_CONFIGURATIO
 FROM base AS final
 WORKDIR /app
 COPY --from=publish /app/publish .
+COPY PaymentOrchestratorLite.Api/app.db ./app.db
 ENTRYPOINT ["dotnet", "PaymentOrchestratorLite.Api.dll"]
+ 

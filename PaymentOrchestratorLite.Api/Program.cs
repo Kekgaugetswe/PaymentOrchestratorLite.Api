@@ -99,8 +99,9 @@ app.MapScalarApiReference(options =>
     options.DefaultHttpClient = new(ScalarTarget.CSharp,
         ScalarClient.RestSharp);
 });
+ // commented out for using docker
+// app.UseHttpsRedirection();
 
-app.UseHttpsRedirection();
 app.UseCors(options =>
 {
     options.AllowAnyHeader();
