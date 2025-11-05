@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "lGuBRSnN5Grdr/B0mbP6bLq151UZ2AjbI10Kw64oWNo=",
+  "Source": "PaymentOrchestratorLite.Api",
+  "BasePath": "_content/PaymentOrchestratorLite.Api",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}

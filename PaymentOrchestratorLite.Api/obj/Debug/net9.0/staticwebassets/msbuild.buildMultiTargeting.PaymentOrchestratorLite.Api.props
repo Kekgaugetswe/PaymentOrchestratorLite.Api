@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="../build/PaymentOrchestratorLite.Api.props" />
+</Project>
